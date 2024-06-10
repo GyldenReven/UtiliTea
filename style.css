@@ -1,0 +1,84 @@
+body {
+    font-family: Quicksand;
+    background-color: #ececec;
+    padding: 0px;
+    margin:  0px;
+}
+
+.navBar {
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    margin: 0px;
+    display: flex;
+    flex-direction: row;
+    list-style-type: none;
+}
+
+.navItem {
+    margin: 0px 10px;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.navItem.selected {
+    background-color: #444;
+}
+
+.navItem:hover {
+    background-color: #555;
+}
+
+.navItem a {
+    text-decoration: none;
+    font-weight: 550;
+    color: #fff;
+}
+
+.container {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.mainTitle {
+    font-size: 40px;
+    font-weight: bold;
+    color: #333;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.textZone {
+    background-color: #ccc;
+    width: 100%;
+    max-width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 10px;
+    font-family: Quicksand;
+    background-color: #f1f1f1;
+    padding: 10px 20px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.morseTraductor {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.morseTraductor textarea {
+    width: 100%;
+    height: 100px;
+    margin: 10px 0px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
