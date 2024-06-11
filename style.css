@@ -70,22 +70,44 @@ body {
 
 .morseTraductor {
     width: 100%;
-    display: grid;
-    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
     grid-template-columns: 1fr 1fr;
 }
 
 .morseTraductor textarea {
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
     resize: none;
-    width: 90%;
+    width: 45%;
     height: 100px;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ccc;
+    border: 1px solid #ddd;
     font-size: large;
     font-family: quicksand;
     font-weight: 500;
 }
 
+.morseTraductor textarea:focus {
+    border: 2px solid #8BD4FF;
+}
+
+.morseTraductor div {
+    margin: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: small;
+}
+
+.morseTraductor .charSelector {
+    padding: 10px;
+    padding-top: 8px;
+    width: 20%;
+    height: 20px;
+    text-align: center;
+}
