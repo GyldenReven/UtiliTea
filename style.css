@@ -2,7 +2,7 @@ body {
     font-family: Quicksand;
     background-color: #ececec;
     padding: 0px;
-    margin:  0px;
+    margin: 0px;
 }
 
 .navBar {
@@ -13,6 +13,11 @@ body {
     display: flex;
     flex-direction: row;
     list-style-type: none;
+}
+
+.navBar .logo {
+    max-height: 40px;
+    margin: 0px 10px;
 }
 
 .navItem {
@@ -38,7 +43,6 @@ body {
 
 .container {
     width: 100%;
-    max-width: 1200px;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -46,6 +50,12 @@ body {
 }
 
 .mainTitle {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+}
+
+.title {
     font-size: 40px;
     font-weight: bold;
     color: #333;
@@ -53,9 +63,14 @@ body {
     margin-bottom: 10px;
 }
 
+.mainTitle .logo {
+    max-height: 50px;
+    max-width: 50px;
+    margin: 0px 10px;
+}
+
 .textZone {
-    width: 100%;
-    max-width: 75%;
+    width: 75%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -72,35 +87,37 @@ body {
     width: 100%;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-between;
     grid-template-columns: 1fr 1fr;
 }
 
 .morseTraductor textarea {
-    margin: auto;
     margin-top: 10px;
     margin-bottom: 10px;
     resize: none;
     width: 45%;
-    height: 100px;
+    height: 100%;
     padding: 10px;
     border-radius: 5px;
-    border: 1px solid #ddd;
+    border: 2px solid #ddd;
     font-size: large;
     font-family: quicksand;
     font-weight: 500;
 }
 
+::placeholder {
+    color: #bbb;
+}
+
 .morseTraductor textarea:focus {
-    border: 2px solid #8BD4FF;
+    outline: none;
+    border: 2px solid #8bd4ff;
 }
 
 .morseTraductor div {
-    margin: auto;
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
-    text-align: center;
     font-size: small;
 }
 
@@ -108,6 +125,6 @@ body {
     padding: 10px;
     padding-top: 8px;
     width: 20%;
-    height: 20px;
+    max-height: 25px;
     text-align: center;
 }

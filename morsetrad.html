@@ -12,7 +12,8 @@
 <body>
     <nav>
         <ul class="navBar">
-            <li class="navItem"><a href="homepage.html">Accueil</a></li>
+            <img src="logo.png" alt="Logo UtiliTea" class="logo"> <!-- Logo du site -->
+            <li class="navItem"><a href="index.html">Accueil</a></li>
             <li class="navItem selected"><a href="morsetrad.html">Traducteur Morse</a></li>
             <li class="navItem"><a href="#">Code César</a></li>
         </ul>
@@ -22,29 +23,29 @@
             <h1 class="mainTitle">Traducteur Morse</h1>
             <div class="morseTraductor">
                 <div>
-                    <textarea name="" id="" rows="6" cols="50"></textarea>
-                    <textarea name="" id="" rows="6" cols="50"></textarea>
+                    <textarea name="" id="inputText" placeholder="texte en lettres" rows="6" cols="50"></textarea>
+                    <textarea name="" id="inputMorse" placeholder="texte en morse" rows="6" cols="50"></textarea>
                 </div>
                 <div>
                     <div>
-                        charactère court :
-                        <textarea name="" id="" placeholder="." class="charSelector"></textarea>
+                        <div>charactère court :</div>
+                        <textarea name="" id="inputPoint" placeholder="." class="charSelector">.</textarea>
                     </div>
                     <div>
                         charactère long :
-                        <textarea name="" id="" placeholder="_" class="charSelector"></textarea>
+                        <textarea name="" id="inputBar" placeholder="-" class="charSelector">-</textarea>
                     </div>
                     <div>
                         séparateur de lettre :
-                        <textarea name="" id="" placeholder=" " class="charSelector"></textarea>
+                        <textarea name="" id="inputSpace" placeholder=" " class="charSelector"> </textarea>
                     </div>
                     <div>
                         séparateur de mot :
-                        <textarea name="" id="" placeholder="/" class="charSelector"></textarea>
+                        <textarea name="" id="inputSlash" placeholder="/" class="charSelector">/</textarea>
                     </div>
                 </div>
             </div>
-    <script src="./morsetrad.js"></script>
 </body>
 
 </html>
+<script src="./morsetrad.js"></script>
