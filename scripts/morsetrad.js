@@ -53,7 +53,7 @@ const morseArray = {
     '"': [0, 1, 0, 0, 1, 0],
     $: [0, 0, 0, 1, 0, 0],
     "@": [0, 1, 1, 0, 1, 0],
-    " ": [4],
+    " ": [3],
 };
 
 function morseToText(morseCode, charArray) {
@@ -68,11 +68,13 @@ function morseToText(morseCode, charArray) {
                     JSON.stringify(morseArray[key]) === JSON.stringify(listChar)
             );
         })
-        .join('');
+        .join("");
 }
 
 function textToMorse(text, charArray) {
     return text
+        .normalize("NFD")
+        .replace(/[\u0300-\u036f]/g, "")
         .split("")
         .map((char) =>
             morseArray[char.toUpperCase()].map((n) => charArray[n]).join("")
@@ -101,10 +103,11 @@ inputText.addEventListener("input", () => {
     ];
     const morseCode = textToMorse(text, charArray);
     console.log(morseCode);
-    inputMorse.textContent = morseCode;
+    inputMorse.value = morseCode;
 });
 
 inputMorse.addEventListener("input", () => {
+    inputText.textContent = "";
     const morseCode = inputMorse.value;
     const charArray = [
         inputPoint.value,
@@ -114,5 +117,5 @@ inputMorse.addEventListener("input", () => {
     ];
     const text = morseToText(morseCode, charArray);
     console.log(text);
-    inputText.textContent = text;
+    inputText.value = text;
 });
