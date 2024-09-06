@@ -128,3 +128,8 @@ body {
     max-height: 25px;
     text-align: center;
 }
+
+#outputError {
+    color: red;
+    font-size: small;
+}

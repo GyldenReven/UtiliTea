@@ -85,25 +85,38 @@ function textToMorse(text, charArray) {
 const inputText = document.getElementById("inputText");
 const inputMorse = document.getElementById("inputMorse");
 
+const outputError = document.getElementById("outputError");
+
 const inputPoint = document.getElementById("inputPoint");
 const inputBar = document.getElementById("inputBar");
 const inputSpace = document.getElementById("inputSpace");
 const inputSlash = document.getElementById("inputSlash");
 
-console.log(inputText);
-console.log(inputMorse);
-
 inputText.addEventListener("input", () => {
-    const text = inputText.value;
-    const charArray = [
-        inputPoint.value,
-        inputBar.value,
-        inputSpace.value,
-        inputSlash.value,
-    ];
-    const morseCode = textToMorse(text, charArray);
-    console.log(morseCode);
-    inputMorse.value = morseCode;
+    try {
+        const text = inputText.value;
+        const charArray = [
+            inputPoint.value,
+            inputBar.value,
+            inputSpace.value,
+            inputSlash.value,
+        ];
+        const morseCode = textToMorse(text, charArray);
+        console.log(morseCode);
+        inputMorse.value = morseCode;
+        outputError.textContent = "";
+    } catch (error) {
+        console.error(error);
+        if (
+            error.message ===
+            "Cannot read properties of undefined (reading 'map')"
+        ) {
+            outputError.textContent =
+                "erreur : vous avez entré un caractère non reconnu";
+        } else {
+            outputError.textContent = "erreur : " + error.message;
+        }
+    }
 });
 
 inputMorse.addEventListener("input", () => {
