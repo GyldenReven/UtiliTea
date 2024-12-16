@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="style.css" />
+        <link rel="icon" href="images/logo.png" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+        <title>Code César</title>
+    </head>
+    <body>
+        <nav>
+            <menu class="navBar">
+                <a href="index.html">
+                    <img
+                        src="images/logo.png"
+                        alt="Logo UtiliTea"
+                        class="logo"
+                    />
+                    <h1 class="title">UtiliTea</h1>
+                </a>
+                <!-- Logo du site -->
+                <li>
+                    <a href="index.html" class="navItem">Accueil</a>
+                </li>
+                <li>
+                    <a href="morsetrad.html" class="navItem">
+                        Traducteur Morse
+                    </a>
+                </li>
+                <li>
+                    <a href="./ceasar.html" class="navItem selected">
+                        Code César
+                    </a>
+                </li>
+            </menu>
+        </nav>
+        <div class="container">
+            <div class="textZone">
+                <h1 class="mainTitle">Convertisseur de code César</h1>
+                <div class="traductor">
+                    <textarea
+                        name=""
+                        id="inputText"
+                        placeholder="texte classique"
+                        rows="6"
+                        cols="50"
+                    ></textarea>
+                    <textarea
+                        name=""
+                        id="outputText"
+                        placeholder="texte encrypté"
+                        rows="6"
+                        cols="50"
+                    ></textarea>
+                    <div>
+                        Décalage :
+                        <textarea
+                            name=""
+                            id="shift"
+                            placeholder="3"
+                            rows="1"
+                            cols="2"
+                            maxlength="2"
+                        ></textarea>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="./scripts/ceasar.js"></script>

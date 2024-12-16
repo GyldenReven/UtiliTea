@@ -8,11 +8,28 @@ body {
 .navBar {
     background-color: #333;
     color: #fff;
-    padding: 10px;
+    padding: 5px;
     margin: 0px;
+    margin-bottom: 10px;
     display: flex;
     flex-direction: row;
     list-style-type: none;
+    align-items: center;
+    box-shadow: #aaa 0px 2px 4px 1px;
+}
+
+.navBar a {
+    display: flex;
+    flex-direction: row;
+    margin-right: auto;
+    border-radius: 5px;
+    padding: 3px;
+    border: #333 solid 2px;
+    transition: all 0.5s;
+}
+
+.navBar a:focus {
+    text-decoration: none;
 }
 
 .navBar .logo {
@@ -20,11 +37,20 @@ body {
     margin: 0px 10px;
 }
 
-.navItem {
+.navBar .title {
+    color: #75b42e;
+    margin: 0;
+    font-size: 2em;
+}
+
+.navBar .navItem {
     margin: 0px 10px;
     padding: 10px;
     border-radius: 5px;
     cursor: pointer;
+    text-decoration: none;
+    font-weight: 550;
+    color: #fff;
 }
 
 .navItem.selected {
@@ -33,12 +59,7 @@ body {
 
 .navItem:hover {
     background-color: #555;
-}
-
-.navItem a {
-    text-decoration: none;
-    font-weight: 550;
-    color: #fff;
+    color: #75b42e;
 }
 
 .container {
@@ -80,22 +101,23 @@ body {
     padding: 10px 20px;
     border-radius: 5px;
     border: 1px solid #ccc;
-    /*box-shadow: #aaa 0px 2px 4px 1px;*/
+    box-shadow: #aaa 0px 2px 4px 1px;
 }
 
-.morseTraductor {
+.traductor {
     width: 100%;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     justify-content: space-between;
     grid-template-columns: 1fr 1fr;
 }
 
-.morseTraductor textarea {
+.traductor textarea {
     margin-top: 10px;
     margin-bottom: 10px;
     resize: none;
-    width: 45%;
+    width: calc(50% - 40px);
     height: 100%;
     padding: 10px;
     border-radius: 5px;
@@ -109,24 +131,30 @@ body {
     color: #bbb;
 }
 
-.morseTraductor textarea:focus {
+.traductor textarea:focus {
     outline: none;
-    border: 2px solid #8bd4ff;
+    border: 2px solid #75b42e;
 }
 
-.morseTraductor div {
+.traductor div {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     font-size: small;
 }
 
-.morseTraductor .charSelector {
+.traductor .charSelector {
     padding: 10px;
     padding-top: 8px;
     width: 20%;
     max-height: 25px;
     text-align: center;
+}
+
+.traductor #shift {
+    max-width: 80px;
+    text-align: center;
+    max-height: 25px;
 }
 
 #outputError {
