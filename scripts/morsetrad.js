@@ -82,17 +82,8 @@ function textToMorse(text, charArray) {
         .join(charArray[2]);
 }
 
-const inputText = document.getElementById("inputText");
-const inputMorse = document.getElementById("inputMorse");
-
-const outputError = document.getElementById("outputError");
-
-const inputPoint = document.getElementById("inputPoint");
-const inputBar = document.getElementById("inputBar");
-const inputSpace = document.getElementById("inputSpace");
-const inputSlash = document.getElementById("inputSlash");
-
-inputText.addEventListener("input", () => {
+function textChange() {
+    // When text need to be updated to morse
     try {
         const text = inputText.value;
         const charArray = [
@@ -117,9 +108,10 @@ inputText.addEventListener("input", () => {
             outputError.textContent = "erreur : " + error.message;
         }
     }
-});
+}
 
-inputMorse.addEventListener("input", () => {
+function morseChange() {
+    // When morse need to be updated to text
     inputText.textContent = "";
     const morseCode = inputMorse.value;
     const charArray = [
@@ -131,4 +123,46 @@ inputMorse.addEventListener("input", () => {
     const text = morseToText(morseCode, charArray);
     console.log(text);
     inputText.value = text;
+}
+
+const inputText = document.getElementById("inputText");
+const inputMorse = document.getElementById("inputMorse");
+
+const outputError = document.getElementById("outputError");
+
+const inputPoint = document.getElementById("inputPoint");
+const inputBar = document.getElementById("inputBar");
+const inputSpace = document.getElementById("inputSpace");
+const inputSlash = document.getElementById("inputSlash");
+
+// Updating from text to morse
+inputText.addEventListener("input", () => {
+    textChange();
 });
+
+// Updating when chararcters are changed
+inputPoint.addEventListener("input", () => {
+    textChange();
+});
+inputBar.addEventListener("input", () => {
+    textChange();
+});
+inputSpace.addEventListener("input", () => {
+    textChange();
+});
+inputSlash.addEventListener("input", () => {
+    textChange();
+});
+
+// Updating from morse to text
+inputMorse.addEventListener("input", () => {
+    morseChange();
+});
+
+// default input settings
+inputPoint.value = ".";
+inputBar.value = "-";
+inputSpace.value = " ";
+inputSlash.value = "/";
+inputText.value = "Hello world !";
+inputMorse.value = ".... . .-.. .-.. --- / .-- --- .-. .-.. -.. / -.-.--";

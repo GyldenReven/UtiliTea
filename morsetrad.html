@@ -1,54 +1,105 @@
 <!DOCTYPE html>
-<html>
-
-<head>
-    <title>Traducteur Morse</title>
-    <link rel="icon" href="images/logo.png">
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
-</head>
-
-<body>
-    <nav>
-        <ul class="navBar">
-            <img src="images/logo.png" alt="Logo UtiliTea" class="logo"> <!-- Logo du site -->
-            <li class="navItem"><a href="index.html">Accueil</a></li>
-            <li class="navItem selected"><a href="morsetrad.html">Traducteur Morse</a></li>
-            <li class="navItem"><a href="#">Code César</a></li>
-        </ul>
-    </nav>
-    <div class="container">
-        <div class="textZone">
-            <h1 class="mainTitle">Traducteur Morse</h1>
-            <div class="morseTraductor">
-                <div>
-                    <textarea name="" id="inputText" placeholder="texte en lettres" rows="6" cols="50"></textarea>
-                    <textarea name="" id="inputMorse" placeholder="texte en morse" rows="6" cols="50"></textarea>
-                </div>
-                <div id="outputError">
-                </div>
-                <div>
+<html lang="fr">
+    <head>
+        <title>Traducteur Morse</title>
+        <link rel="icon" href="images/logo.png" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+    <body>
+        <nav>
+            <menu class="navBar">
+                <a href="index.html">
+                    <img
+                        src="images/logo.png"
+                        alt="Logo UtiliTea"
+                        class="logo"
+                    />
+                    <h1 class="title">UtiliTea</h1>
+                </a>
+                <!-- Logo du site -->
+                <li>
+                    <a href="index.html" class="navItem">Accueil</a>
+                </li>
+                <li>
+                    <a href="morsetrad.html" class="navItem selected">
+                        Traducteur Morse
+                    </a>
+                </li>
+                <li>
+                    <a href="./ceasar.html" class="navItem"> Code César </a>
+                </li>
+            </menu>
+        </nav>
+        <div class="container">
+            <div class="textZone">
+                <h1 class="mainTitle">Traducteur Morse</h1>
+                <div class="traductor">
+                    <textarea
+                        name=""
+                        id="inputText"
+                        placeholder="texte en lettres"
+                        rows="6"
+                        cols="50"
+                    ></textarea>
+                    <textarea
+                        name=""
+                        id="inputMorse"
+                        placeholder="texte en morse"
+                        rows="6"
+                        cols="50"
+                    ></textarea>
+                    <div id="outputError"></div>
                     <div>
-                        <div>charactère court :</div>
-                        <textarea name="" id="inputPoint" placeholder="." class="charSelector">.</textarea>
-                    </div>
-                    <div>
-                        charactère long :
-                        <textarea name="" id="inputBar" placeholder="-" class="charSelector">-</textarea>
-                    </div>
-                    <div>
-                        séparateur de lettre :
-                        <textarea name="" id="inputSpace" placeholder=" " class="charSelector"> </textarea>
-                    </div>
-                    <div>
-                        séparateur de mot :
-                        <textarea name="" id="inputSlash" placeholder="/" class="charSelector">/</textarea>
+                        <div>
+                            <div>charactère court :</div>
+                            <textarea
+                                name=""
+                                id="inputPoint"
+                                placeholder="."
+                                class="charSelector"
+                                maxlength="1"
+                            ></textarea>
+                        </div>
+                        <div>
+                            charactère long :
+                            <textarea
+                                name=""
+                                id="inputBar"
+                                placeholder="-"
+                                class="charSelector"
+                                maxlength="1"
+                            ></textarea>
+                        </div>
+                        <div>
+                            séparateur de lettre :
+                            <textarea
+                                name=""
+                                id="inputSpace"
+                                placeholder=" "
+                                class="charSelector"
+                                maxlength="1"
+                            ></textarea>
+                        </div>
+                        <div>
+                            séparateur de mot :
+                            <textarea
+                                name=""
+                                id="inputSlash"
+                                placeholder="/"
+                                class="charSelector"
+                                maxlength="1"
+                            ></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
-</body>
-
+        </div>
+    </body>
 </html>
 <script src="./scripts/morsetrad.js"></script>
