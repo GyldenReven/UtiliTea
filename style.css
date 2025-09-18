@@ -162,3 +162,35 @@ body {
     color: red;
     font-size: small;
 }
+
+@media (max-width: 800px) {
+    .traductor textarea {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .traductor div {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+
+    .traductor .charSelector {
+        width: 30%;
+    }
+
+    .traductor #shift {
+        max-width: 100px;
+    }
+
+    .traductor > div {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .traductor > div text-area {
+        width: 50%;
+    }
+    .traductor > div > div > div {
+        width: 50%;
+    }
+}
