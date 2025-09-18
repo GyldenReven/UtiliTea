@@ -2,6 +2,7 @@
 <html lang="fr">
     <head>
         <title>Traducteur Morse</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="icon" href="images/logo.png" />
         <link rel="stylesheet" type="text/css" href="style.css" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -13,7 +14,7 @@
     </head>
     <body>
         <nav>
-            <menu class="navBar">
+            <menu class="navBar" id="topnav">
                 <a href="index.html">
                     <img
                         src="images/logo.png"
@@ -34,6 +35,13 @@
                 <li>
                     <a href="./ceasar.html" class="navItem"> Code César </a>
                 </li>
+                <button class="options" onclick="showOptions()">
+                    <img
+                        id="options-icon"
+                        src="images/list-down.png"
+                        alt="Options"
+                    />
+                </button>
             </menu>
         </nav>
         <div class="container">
@@ -57,7 +65,7 @@
                     <div id="outputError"></div>
                     <div>
                         <div>
-                            <div>charactère court :</div>
+                            charactère court :
                             <textarea
                                 name=""
                                 id="inputPoint"
@@ -103,3 +111,4 @@
     </body>
 </html>
 <script src="./scripts/morsetrad.js"></script>
+<script src="./scripts/showOptions.js"></script>

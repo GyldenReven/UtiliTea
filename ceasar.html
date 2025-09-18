@@ -15,7 +15,7 @@
     </head>
     <body>
         <nav>
-            <menu class="navBar">
+            <menu class="navBar" id="topnav">
                 <a href="index.html">
                     <img
                         src="images/logo.png"
@@ -38,6 +38,13 @@
                         Code César
                     </a>
                 </li>
+                <button class="options" onclick="showOptions()">
+                    <img
+                        id="options-icon"
+                        src="images/list-down.png"
+                        alt="Options"
+                    />
+                </button>
             </menu>
         </nav>
         <div class="container">
@@ -59,15 +66,17 @@
                         cols="50"
                     ></textarea>
                     <div>
-                        Décalage :
-                        <textarea
-                            name=""
-                            id="shift"
-                            placeholder="3"
-                            rows="1"
-                            cols="2"
-                            maxlength="2"
-                        ></textarea>
+                        <div>
+                            Décalage :
+                            <textarea
+                                name=""
+                                id="shift"
+                                placeholder="3"
+                                rows="1"
+                                cols="2"
+                                maxlength="2"
+                            ></textarea>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -75,3 +84,4 @@
     </body>
 </html>
 <script src="./scripts/ceasar.js"></script>
+<script src="./scripts/showOptions.js"></script>
