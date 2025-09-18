@@ -170,6 +170,7 @@ body {
 
 .options {
     padding: 5px;
+    display: none;
 }
 
 .options > img {
@@ -181,6 +182,7 @@ body {
         height: 40px;
         width: 40px;
         margin-right: 10px;
+        display: block;
     }
 
     .navBar > li {
