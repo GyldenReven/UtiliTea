@@ -14,7 +14,7 @@
     </head>
     <body>
         <nav>
-            <menu class="navBar">
+            <menu class="navBar" id="topnav">
                 <a href="index.html">
                     <img
                         src="images/logo.png"
@@ -35,6 +35,13 @@
                 <li>
                     <a href="./ceasar.html" class="navItem"> Code César </a>
                 </li>
+                <button class="options" onclick="showOptions()">
+                    <img
+                        id="options-icon"
+                        src="images/list-down.png"
+                        alt="Options"
+                    />
+                </button>
             </menu>
         </nav>
         <div class="container">
@@ -104,3 +111,4 @@
     </body>
 </html>
 <script src="./scripts/morsetrad.js"></script>
+<script src="./scripts/showOptions.js"></script>

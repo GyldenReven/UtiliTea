@@ -44,7 +44,9 @@ body {
     font-size: 2em;
 }
 
-.navBar .navItem {
+.navBar .navItem,
+.options {
+    transition: all 0.5s;
     margin: 0px 10px;
     padding: 10px;
     border-radius: 10px;
@@ -52,15 +54,18 @@ body {
     text-decoration: none;
     font-weight: 550;
     color: #fff;
+    border: 1px solid #333;
 }
 
-.navItem.selected {
+.navItem.selected,
+.options {
     background-color: #444;
 }
 
-.navItem:hover {
-    background-color: #555;
-    color: #75b42e;
+.navItem:hover,
+.options:hover {
+    background-color: #444;
+    border-color: #75b42e;
 }
 
 .container {
@@ -163,7 +168,45 @@ body {
     font-size: small;
 }
 
-@media (max-width: 800px) {
+.options {
+    padding: 5px;
+}
+
+.options > img {
+    max-height: 100%;
+}
+
+@media (max-width: 600px) {
+    .navBar .options {
+        height: 40px;
+        width: 40px;
+        margin-right: 10px;
+    }
+
+    .navBar > li {
+        display: none;
+        margin-top: 5px;
+    }
+
+    .navBar.responsive {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .navBar.responsive .options {
+        position: absolute;
+        right: 5px;
+        top: 10px;
+    }
+
+    .navBar.responsive li {
+        width: 100%;
+        float: none;
+        display: block;
+        text-align: left;
+    }
+
     .traductor textarea {
         width: 100%;
         margin-bottom: 10px;
