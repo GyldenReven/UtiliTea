@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Convertisseur de base</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="icon" href="images/logo.png" />
+        <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap"
+            rel="stylesheet"
+        />
+    </head>
+
+    <body>
+        <nav>
+            <menu class="navBar" id="topnav">
+                <a href="index.html">
+                    <img
+                        src="images/logo.png"
+                        alt="Logo UtiliTea"
+                        class="logo"
+                    />
+                    <h1 class="title">UtiliTea</h1>
+                </a>
+                <!-- Logo du site -->
+                <li>
+                    <a href="index.html" class="navItem">Accueil</a>
+                </li>
+                <li>
+                    <a href="morsetrad.html" class="navItem">
+                        Traducteur Morse
+                    </a>
+                </li>
+                <li>
+                    <a href="./ceasar.html" class="navItem"> Code César </a>
+                </li>
+                <li>
+                    <a href="./converter.html" class="navItem selected">
+                        Convertisseur de base
+                    </a>
+                </li>
+                <button class="options" onclick="showOptions()">
+                    <img
+                        id="options-icon"
+                        src="images/list-down.png"
+                        alt="Options"
+                    />
+                </button>
+            </menu>
+        </nav>
+        <div class="container">
+            <div class="textZone">
+                <h1 class="mainTitle">Convertisseur de base</h1>
+                <div class="traductor converter">
+                    <div>
+                        <select name="" id="base1" class="baseSelector">
+                            <option value="2">Binaire (base 2)</option>
+                            <option value="3">Tertiaire (base 3)</option>
+                            <option value="4">Quaternaire (base 4)</option>
+                            <option value="5">Quinaire (base 5)</option>
+                            <option value="6">Sénnaire (base 6)</option>
+                            <option value="7">Septénaire (base 7)</option>
+                            <option value="8">Octal (base 8)</option>
+                            <option value="9">Nonnaire (base 9)</option>
+                            <option value="10" selected>
+                                Décimal (base 10)
+                            </option>
+                            <option value="11">Undécimal (base 11)</option>
+                            <option value="12">Duodécimal (base 12)</option>
+                            <option value="13">Tridécimal (base 13)</option>
+                            <option value="14">Tétradécimal (base 14)</option>
+                            <option value="15">Pentadécimal (base 15)</option>
+                            <option value="16">Hexadécimal (base 16)</option>
+                        </select>
+                        <textarea
+                            name=""
+                            id="input1"
+                            placeholder="0"
+                            rows="1"
+                        ></textarea>
+                    </div>
+                    <div>
+                        <select name="" id="base1" class="baseSelector">
+                            <option value="2">Binaire (base 2)</option>
+                            <option value="3">Tertiaire (base 3)</option>
+                            <option value="4">Quaternaire (base 4)</option>
+                            <option value="5">Quinaire (base 5)</option>
+                            <option value="6">Sénnaire (base 6)</option>
+                            <option value="7">Septénaire (base 7)</option>
+                            <option value="8">Octal (base 8)</option>
+                            <option value="9">Nonnaire (base 9)</option>
+                            <option value="10" selected>
+                                Décimal (base 10)
+                            </option>
+                            <option value="11">Undécimal (base 11)</option>
+                            <option value="12">Duodécimal (base 12)</option>
+                            <option value="13">Tridécimal (base 13)</option>
+                            <option value="14">Tétradécimal (base 14)</option>
+                            <option value="15">Pentadécimal (base 15)</option>
+                            <option value="16">Hexadécimal (base 16)</option>
+                        </select>
+                        <textarea
+                            name=""
+                            id="input2"
+                            placeholder="0"
+                            rows="1"
+                        ></textarea>
+                    </div>
+                    <div>
+                        <select name="" id="base1" class="baseSelector">
+                            <option value="2">Binaire (base 2)</option>
+                            <option value="3">Tertiaire (base 3)</option>
+                            <option value="4">Quaternaire (base 4)</option>
+                            <option value="5">Quinaire (base 5)</option>
+                            <option value="6">Sénnaire (base 6)</option>
+                            <option value="7">Septénaire (base 7)</option>
+                            <option value="8">Octal (base 8)</option>
+                            <option value="9">Nonnaire (base 9)</option>
+                            <option value="10" selected>
+                                Décimal (base 10)
+                            </option>
+                            <option value="11">Undécimal (base 11)</option>
+                            <option value="12">Duodécimal (base 12)</option>
+                            <option value="13">Tridécimal (base 13)</option>
+                            <option value="14">Tétradécimal (base 14)</option>
+                            <option value="15">Pentadécimal (base 15)</option>
+                            <option value="16">Hexadécimal (base 16)</option>
+                        </select>
+                    <textarea
+                        name=""
+                        id="input3"
+                        placeholder="0"
+                        rows="1"
+                    ></textarea>
+                    <div id="outputError"></div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+<script src="./scripts/showOptions.js"></script>
