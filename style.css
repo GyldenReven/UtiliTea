@@ -189,6 +189,25 @@ body {
     max-height: 100%;
 }
 
+.baseSelector {
+    padding: 10px;
+    height: 100%;
+    text-align: center;
+    margin-right: 10px;
+    border-radius: 10px;
+    border: 2px solid #bbb;
+    font-size: medium;
+    background-color: #ddd;
+}
+
+.baseConverter > div {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px 0px;
+}
+
 @media (max-width: 600px) {
     .navBar .options {
         height: 40px;
