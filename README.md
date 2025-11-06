@@ -1,21 +1,37 @@
 # UtiliTea
 
-(english at the bottom)
+UtiliTea est un projet en HTML, CSS et JavaScript. Il s'agit d'un site web implémentant quelques "outils" en JavaScript
 
-## Français :
-UtiliTea est un petit projet en html, css et javascript. C'est un petit site web avec quelques petits "outils"
-Le premier objectif de ce projet est de me familiariser avec html, css et javascript. Sentez vous libre néanmoins de l'utiliser ou de regarder le code pour vous aider pour vos propres projets.
+Le premier objectif de ce projet est de me familiariser avec HTML, CSS et JavaScript en apprenant à faire intéragir les
+différents éléments d'une page web avec un code JavaScript
 
-### Module 1 : Le traducteur morse
+## Outil 1 : Le traducteur morse
+
 Cette page, permet de convertir un texte en morse et vice-versa
 
-Vous pouvez également changer les différents charactères pour la conversion en morse. un exemple d'utilisation concret de cette foncionnalitée est par exemple pour échanger le tiret '-' avec le tiret '_'. Néanmoins libre a vous de changer les quatres caractères comme bon vous semble pour experimenter les résultats
+Pour plus d'originalité, il est également possible de  changer les différents charactères représentant la conversion en morse. 
+Un exemple d'utilisation concret de cette foncionnalitée est par exemple pour échanger le trait d'union et `-` avec le tiret bas `_`. 
+
+Il est néanmoins possible de changer les quatres caractères complètement afin de produire un "code morse" plus difficile à 
+déchiffrer sans connaire les charactères entrés.
 
 il est bon de noter que dans le quadre de la conversion du morse vers l'alphabet, un caractère non reconnu sera simplement ignoré.
 
-d'autres modules sont a venir
+## Outil 2 : Le convertiseur de code César
 
-## English :
-UtiliTea is a small project in html, css and javascript. It is a small website with some small tools.
-The first objective of this project is to make me familiarize with html, css and javascript. But feel free to use it or read the code to help yourself for your projects.
-This project is mainly french so the site is in french for the moment, english may come in future updates
+Cette page permet d'appliquer un décalage sur les lettres de l'alphabets afin de produire un code césar.
+
+Il est possible de chiffrer en code césar en entrant un message dans la zone de droite mais le déchiffrement peut être effectué
+en entrant un texte chiffré dans la zone de droite.
+
+Le décalage peut être choisi librement par l'utilisateur dans l'intervalle `{-9, 99}`
+
+## Outil 3 : Le convertisseur de base
+
+Cette page permet de convertir des bases numériques.
+
+Le convertisseur offre la possibilité de convertir une base entre 2 et 16 en deux autres bases simultanément. Cela permet
+par exemple de facilement visualier simultanément un nombre en binéaire, décimal et héxadécimal.
+
+Si le champ d'entrée modifié est vide, la conversion ne sera pas effectuée. Dans le cas ou un caractère incorrect serait
+présent dans une base, le résultat de la conversion sera alors `NaN (Not a Number)`
